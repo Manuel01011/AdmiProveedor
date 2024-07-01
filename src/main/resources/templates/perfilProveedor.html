@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Perfil Proveedor</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<header>
+    <h1>Perfil de proveedor</h1>
+</header>
+<br>
+
+<div class="button-container3">
+    <a href="/editarPerfil"><button>Editar Perfil</button></a>
+    <a href="/registrarCliente"><button>Registrar Clientes</button></a>
+    <a href="/registrarProductos"><button>Registrar Productos</button></a>
+    <a href="/registrarFactura"><button>Registrar Factura</button></a>
+    <a href="/login"><button>Cerrar sesión</button></a>
+</div>
+
+<!-- Contenedor para el nombre del proveedor -->
+<div class="proveedor-info">
+    <p id="nombreProveedor"></p>
+</div>
+
+<div class="tabla-contenedor">
+    <table id="tablaClientes">
+        <thead>
+        <tr>
+            <th>Identificación</th>
+            <th>Nombre</th>
+        </tr>
+        </thead>
+        <tbody>
+        <!-- Los clientes se añadirán aquí -->
+        </tbody>
+    </table>
+
+    <table id="tablaProductos">
+        <thead>
+        <tr>
+            <th>Código</th>
+            <th>Nombre</th>
+            <th>Precio</th>
+        </tr>
+        </thead>
+        <tbody>
+        <!-- Los productos se añadirán aquí -->
+        </tbody>
+    </table>
+
+    <table id="tablaFacturas">
+        <thead>
+        <tr>
+            <th>Código</th>
+            <th>Fecha</th>
+            <th>Precio</th>
+            <th>Descargar PDF</th>
+            <th>Descargar XML</th>
+        </tr>
+        </thead>
+        <tbody>
+        <!-- Los facturas se añadirán aquí -->
+        </tbody>
+    </table>
+</div>
+
+<script src="/codee.js"></script>
+</body>
+</html>

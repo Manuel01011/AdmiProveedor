@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registrar Factura</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<header>
+    <h1>Registrar Factura</h1>
+</header>
+<div class="container">
+    <form id="registrarFacturaForm" action="/registrarFactura" method="post">
+        <label for="codigo">Código: </label>
+        <input type="text" id="codigo" name="codigo" required>
+        <br>
+        <label for="cliente">Identificación del Cliente: </label>
+        <input type="text" id="cliente" name="cliente" required>
+        <br>
+        <label for="producto">Código del Producto: </label>
+        <input type="text" id="producto" name="producto" required>
+        <br>
+        <label for="fecha">Fecha: </label>
+        <input type="date" id="fecha" name="fecha" required>
+        <br>
+        <label for="precio">Precio: </label>
+        <input type="text" id="precio" name="precio" required>
+        <br>
+        <button type="submit">Registrar Factura</button>
+    </form>
+</div>
+
+<footer>
+    <p><i>2024 - Derechos reservados - Hacienda</i></p>
+</footer>
+</body>
+</html>

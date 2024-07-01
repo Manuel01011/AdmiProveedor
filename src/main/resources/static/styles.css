@@ -1,0 +1,392 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+    background-image: url('/static/imagenes/Ministerio-de-Hacienda.png');
+    background-size: cover; /* Para cubrir toda la pantalla */
+    background-position: center; /* Centra la imagen */
+}
+.btnRechazar {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.btnRechazar:hover {
+    background-color: darkred;
+}
+#btnCrear {
+    background-color: #4099A0;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px; /* Ajusta el tamaño de la fuente */
+    width: 100%; /* Hace que el botón ocupe el 100% del contenedor */
+    max-width: 200px; /* Define un ancho máximo */
+    display: block; /* Asegura que el botón se comporte como un bloque */
+    margin: 0 auto; /* Centra el botón */
+    text-align: center; /* Centra el texto dentro del botón */
+}
+
+#btnCrear:hover {
+    background-color: #28a745;
+}
+
+#tablaProveedores {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#tablaProveedores th, #tablaProveedores td {
+    border: 1px solid #dddddd;
+    padding: 8px;
+    text-align: left;
+}
+
+#tablaProveedores th {
+    background-color: #4CAF50;
+    text-align: center;
+}
+
+#modalProveedor {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+#modalProveedor h5 {
+    margin: 0;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+#modalProveedor form div {
+    margin-bottom: 15px;
+}
+
+#modalProveedor label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#modalProveedor input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#modalProveedor button[type="button"],
+#modalProveedor button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#modalProveedor button[type="button"] {
+    background-color: #6c757d;
+    margin-right: 10px;
+}
+
+#modalProveedor button[type="button"]:hover {
+    background-color: #5a6268;
+}
+
+#modalProveedor button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+#perfilProveedor {
+    display: none;
+}
+
+#loginForm {
+    display: block;
+}
+.button-container3 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.button-container3 a {
+    text-decoration: none;
+    margin: 10px;
+}
+
+.button-container3 button {
+    padding: 20px 40px;
+    font-size: 20px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.button-container3 button i {
+    margin-right: 10px;
+}
+
+.button-container3 button:hover {
+    background-color: #45a049;
+    transform: scale(1.1);
+}
+
+nav {
+    background: linear-gradient(to bottom, #45a049, #4099A0);
+    color: #e0e8d1;
+    width: 100%;
+    padding: 0.5em;
+    margin: 0;
+}
+
+nav a{
+    color: white; /*modificamos los links del inicio*/
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+nav ul li{
+    display: inline;
+    margin-right: 10px;
+}
+
+.proveedor-info{
+    background: linear-gradient(to bottom, #45a049, #4099A0);
+    color: #000000;
+    border: none;
+}
+header {
+    background: linear-gradient(to bottom, #45a049, #4099A0);
+    color: #000000;
+    padding: 1em;
+    width: 100%;
+    margin: 0;
+}
+
+footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(to bottom, #45a049, #4099A0);
+    color: #000000;
+    text-align: center;
+}
+
+form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="password"],
+button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+
+#loginForm {
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 300px; /* Establece el ancho del formulario */
+}
+
+.containerEdita{
+    display: flex;
+    justify-content: flex-start; /* Alinea el formulario a la izquierda */
+    padding: 20px; /* Opcional: para darle un margen interno */
+}
+
+form {
+    width: 100%;
+    max-width: 300px; /* Ajusta el tamaño máximo del formulario */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+button {
+    background-color: #45a049;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #4099A0;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+#alogin{
+    margin: 0 auto;
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#errorMessage {
+    text-align: center;
+}
+
+/* Estilos para el contenedor del nombre del proveedor */
+.proveedor-info {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Estilos generales para las tablas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilos para los encabezados de las tablas */
+table th {
+    background-color: #4099A0;
+    color: white;
+    padding: 10px;
+    text-align: left;
+}
+
+/* Estilos para las celdas de las tablas */
+table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+/* Estilos para las filas alternas */
+table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Estilos específicos para la tabla de clientes */
+#tablaClientes th,
+#tablaClientes td {
+    border-color: #4CAF50;
+
+}
+
+/* Estilos específicos para la tabla de productos */
+#tablaProductos th,
+#tablaProductos td {
+    border-color: #2196F3;
+}
+
+/* Estilos específicos para la tabla de facturas */
+#tablaFacturas th,
+#tablaFacturas td {
+    border-color: #FF9800;
+}
+
+/* Hover effect for table rows */
+table tbody tr:hover {
+    background-color: #ddd;
+}
+
+/* Contenedor para las tablas */
+.tabla-contenedor {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Espacio entre las tablas */
+    margin-top: 20px;
+}
+
+/* Estilo para cada tabla dentro del contenedor */
+.tabla-contenedor table {
+    flex: 1;
+    max-width: 33%;
+}
+
+#tablesContainer {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.table-container {
+    width: 45%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+    text-align: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.container{
+    width: 300px; /* Puedes ajustar el ancho según tus necesidades */
+    height: 200px; /* Puedes ajustar la altura según tus necesidades */
+    background-color: #f0f0f0; /* Color de fondo para visualización */
+    position: absolute; /* Esto permite el centrado absoluto */
+    top: 50%; /* Centra el div verticalmente en relación con la ventana */
+    left: 50%; /* Centra el div horizontalmente en relación con la ventana */
+    transform: translate(-50%, -50%); /* Centra el div correctamente */
+}
